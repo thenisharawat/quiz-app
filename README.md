@@ -1,6 +1,6 @@
 # Quiz Web Application
 
-This is a quiz application built with the stack (MongoDB, Express.js, and Node.js).
+This is a quiz application built with the MERN stack (MongoDB, Express.js, React.js and Node.js).
 
 ## Features
 1. Auto admin creation when the server starts for the first time
