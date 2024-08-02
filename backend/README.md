@@ -1,4 +1,4 @@
-```sh {"id":"01J488F4YTETCZX2ZCP9EG34EF"}
+```
 # Quiz Web Application
 
 This is a quiz application built with the stack (MongoDB, Express.js and Node.js).
@@ -34,8 +34,6 @@ ADMIN_EMAIL2="admin2@test.com"
 ADMIN_PASSWORD2="1111"
 ADMIN_MOBILE2=8976543211
 `
-
-```md {"id":"01J488KNTJNBBCMKGM2RGMHE6D"}
 4. Start the server: `npm start`
 
 ```
