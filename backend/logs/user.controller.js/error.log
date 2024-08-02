@@ -1,0 +1,11 @@
+{"level":50,"time":1722569842795,"pid":68521,"hostname":"neosoft-Latitude-E5470","module":"registerUserController","msg":"messages.userSaved is not a function"}
+{"level":50,"time":1722570578361,"pid":72902,"hostname":"neosoft-Latitude-E5470","module":"registerUserController","msg":"user.save(...).lean is not a function"}
+{"level":50,"time":1722570617696,"pid":73082,"hostname":"neosoft-Latitude-E5470","module":"registerUserController","msg":"restResponse.lean is not a function"}
+{"level":50,"time":1722571245243,"pid":75702,"hostname":"neosoft-Latitude-E5470","module":"updateUserController","msg":"userModelSchema.findAndUpdateOne is not a function"}
+{"level":50,"time":1722571996784,"pid":78880,"hostname":"neosoft-Latitude-E5470","module":"deleteUserController","msg":"Class constructor ObjectId cannot be invoked without 'new'"}
+{"level":50,"time":1722572057475,"pid":79271,"hostname":"neosoft-Latitude-E5470","module":"deleteUserController","msg":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"_id\" for model \"users\""}
+{"level":50,"time":1722572117552,"pid":79576,"hostname":"neosoft-Latitude-E5470","module":"deleteUserController","msg":"user_id is not defined"}
+{"level":50,"time":1722572608015,"pid":81592,"hostname":"neosoft-Latitude-E5470","module":"getUserController","msg":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"_id\" for model \"users\""}
+{"level":50,"time":1722572659585,"pid":81912,"hostname":"neosoft-Latitude-E5470","module":"getUserController","msg":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"_id\" for model \"users\""}
+{"level":50,"time":1722572689889,"pid":82073,"hostname":"neosoft-Latitude-E5470","module":"getUserController","msg":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"_id\" for model \"users\""}
+{"level":50,"time":1722572708095,"pid":82157,"hostname":"neosoft-Latitude-E5470","module":"getUserController","msg":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"_id\" for model \"users\""}

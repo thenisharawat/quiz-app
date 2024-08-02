@@ -1,0 +1,17 @@
+{"level":50,"time":1722588656172,"pid":138478,"hostname":"neosoft-Latitude-E5470","module":"getAllQuizzesController","msg":"quizSchema.find is not a function"}
+{"level":50,"time":1722588697099,"pid":138478,"hostname":"neosoft-Latitude-E5470","module":"getAllQuizzesController","msg":"quizSchema.find is not a function"}
+{"level":50,"time":1722588735271,"pid":139296,"hostname":"neosoft-Latitude-E5470","module":"getAllQuizzesController","msg":"quizSchema.find is not a function"}
+{"level":50,"time":1722589072939,"pid":140914,"hostname":"neosoft-Latitude-E5470","module":"getAllQuizzesController","msg":"checklistItemsResult is not defined"}
+{"level":50,"time":1722589719088,"pid":143295,"hostname":"neosoft-Latitude-E5470","module":"attemptQuizController","msg":"Quiz not found"}
+{"level":50,"time":1722589784484,"pid":143797,"hostname":"neosoft-Latitude-E5470","module":"attemptQuizController","msg":"Cannot read properties of null (reading 'questions')"}
+{"level":50,"time":1722590204031,"pid":145093,"hostname":"neosoft-Latitude-E5470","module":"attemptQuizController","msg":"Cannot read properties of null (reading 'questions')"}
+{"level":50,"time":1722590259120,"pid":145719,"hostname":"neosoft-Latitude-E5470","module":"attemptQuizController","msg":"Cannot read properties of null (reading 'questions')"}
+{"level":50,"time":1722590282823,"pid":145833,"hostname":"neosoft-Latitude-E5470","module":"attemptQuizController","msg":"Cannot read properties of null (reading 'questions')"}
+{"level":50,"time":1722590343492,"pid":146074,"hostname":"neosoft-Latitude-E5470","module":"attemptQuizController","msg":"messages.quizAttemptedSuccessfully is not a function"}
+{"level":50,"time":1722590398982,"pid":146341,"hostname":"neosoft-Latitude-E5470","module":"attemptQuizController","msg":"messages.quizAlreadyAttempted is not a function"}
+{"level":50,"time":1722590531869,"pid":146850,"hostname":"neosoft-Latitude-E5470","module":"attemptQuizController","msg":"messages.quizAttemptedSuccessfully is not a function"}
+{"level":50,"time":1722591078049,"pid":149475,"hostname":"neosoft-Latitude-E5470","module":"attemptQuizController","msg":"Cast to ObjectId failed for value \"Paris\" (type string) at path \"_id\" for model \"Quiz\""}
+{"level":50,"time":1722591209788,"pid":149997,"hostname":"neosoft-Latitude-E5470","module":"attemptQuizController","msg":"Cast to ObjectId failed for value \"Paris\" (type string) at path \"_id\" for model \"Quiz\""}
+{"level":50,"time":1722593480555,"pid":160316,"hostname":"neosoft-Latitude-E5470","module":"viewQuizScoreController","msg":"messages.scoreFound is not a function"}
+{"level":50,"time":1722594546405,"pid":165407,"hostname":"neosoft-Latitude-E5470","module":"viewDashboardDataController","msg":"Class constructor ObjectId cannot be invoked without 'new'"}
+{"level":50,"time":1722594603870,"pid":165800,"hostname":"neosoft-Latitude-E5470","module":"viewDashboardDataController","msg":"Class constructor ObjectId cannot be invoked without 'new'"}

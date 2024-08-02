@@ -1,0 +1,917 @@
+{
+	"info": {
+		"_postman_id": "059ae226-3df2-47bf-95b5-e5a3cb1b3310",
+		"name": "Quiz APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20048469"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin Login | {{host}}/api/admin/login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.expect(pm.response.code).to.equal(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"  const responseData = pm.response.json();",
+									"  ",
+									"  pm.expect(responseData).to.be.an('object');",
+									"  pm.expect(responseData).to.have.property('success');",
+									"  pm.expect(responseData).to.have.property('message');",
+									"  pm.expect(responseData).to.have.property('data');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Success field is a boolean value\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.success).to.be.a('boolean');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Message field is a string\", function () {",
+									"  const responseData = pm.response.json();",
+									"  ",
+									"  pm.expect(responseData.message).to.be.a('string');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Data field should be empty\", function () {",
+									"  const responseData = pm.response.json();",
+									"  ",
+									"  pm.expect(responseData.data).to.be.empty;",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@test.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/admin/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"login"
+							]
+						},
+						"description": "### Admin Login\n\nThis endpoint is used to authenticate an admin user.\n\n#### Request Body\n\n- `email` (string, required): The email of the admin user.\n- `password` (string, required): The password of the admin user.\n    \n\nExample:\n\n``` json\n{\n  \"email\": \"example@example.com\",\n  \"password\": \"********\"\n}\n\n ```\n\n#### Response\n\nThe response will include the authentication token for the admin user.\n\nExample:\n\n``` json\n{\n  \"token\": \"********\"\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "Admin Login | {{host}}/api/admin/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/admin/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "434"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b2-JVTi15Y0cfLOaOd36A5QCvFfbkI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Apr 2024 09:49:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Logged in successfully!\",\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Ik11a2VzaCBLYXJuIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm1vYmlsZV9udW1iZXIiOjg5NzY1NDMyMTAsInJvbGUiOjEsInN0YXR1cyI6MSwiY3JlYXRlZF9hdCI6IjIwMjQtMDQtMjBUMTU6MjI6MDkuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDI0LTA0LTIwVDE1OjIyOjA5LjAwMFoiLCJpYXQiOjE3MTQyOTc3ODksImV4cCI6MTcxNDM4NDE4OX0.v1DgZ-7tP4MuThVBz7jayAyMXd2AoLkMSiBiVm9Fz94\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register User | {{host}}/api/user/register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"User one\",\r\n    \"email\": \"user1@test.com\",\r\n    \"mobile_number\": 9234561244,\r\n    \"password\": \"user1\",\r\n    \"address\": \"123 Main St, City, Country\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/user/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						},
+						"description": "\nThe `POST /api/user/register` endpoint is used to register a new user. The request should include the user's name, email, mobile number, password, and address in the request body.\n\n### Request Body\n- `name` (string): The name of the user.\n- `email` (string): The email address of the user.\n- `mobile_number` (number): The mobile number of the user.\n- `password` (string): The password for the user account.\n- `address` (string): The address of the user.\n\n### Response\nThe response for this request is in JSON format with the following schema:\n```json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"success\": {\n      \"type\": \"boolean\"\n    },\n    \"message\": {\n      \"type\": \"string\"\n    },\n    \"data\": {\n      \"type\": \"null\"\n    }\n  }\n}\n```\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Login user | {{host}}/api/user/login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user1@test.com\",\r\n    \"password\": \"user1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/user/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						},
+						"description": "\n### Login User\n\nThis endpoint allows users to log in by providing their email and password.\n\n#### Request Body\n- `email` (string, required): The email of the user.\n- `password` (string, required): The password of the user.\n\n#### Response\nThe response is a JSON object with the following properties:\n- `success` (boolean): Indicates if the login was successful.\n- `message` (string): A message related to the login process.\n- `data` (object): An object containing the user's information.\n  - `id` (number): The user's ID.\n  - `name` (string): The user's name.\n  - `email` (string): The user's email.\n  - `mobile_number` (number): The user's mobile number.\n  - `address` (string): The user's address.\n  - `role` (number): The user's role.\n  - `status` (number): The user's status.\n  - `created_at` (string): The timestamp when the user was created.\n  - `updated_at` (string): The timestamp when the user was last updated.\n  - `token` (string): The authentication token for the user.\n\n#### Example Response\n```json\n{\n    \"success\": true,\n    \"message\": \"\",\n    \"data\": {\n        \"id\": 0,\n        \"name\": \"\",\n        \"email\": \"\",\n        \"mobile_number\": 0,\n        \"address\": \"\",\n        \"role\": 0,\n        \"status\": 0,\n        \"created_at\": \"\",\n        \"updated_at\": \"\",\n        \"token\": \"\"\n    }\n}\n```\n\n#### JSON Schema\n```json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"success\": {\n            \"type\": \"boolean\"\n        },\n        \"message\": {\n            \"type\": \"string\"\n        },\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"id\": {\n                    \"type\": \"number\"\n                },\n                \"name\": {\n                    \"type\": \"string\"\n                },\n                \"email\": {\n                    \"type\": \"string\"\n                },\n                \"mobile_number\": {\n                    \"type\": \"number\"\n                },\n                \"address\": {\n                    \"type\": \"string\"\n                },\n                \"role\": {\n                    \"type\": \"number\"\n                },\n                \"status\": {\n                    \"type\": \"number\"\n                },\n                \"created_at\": {\n                    \"type\": \"string\"\n                },\n                \"updated_at\": {\n                    \"type\": \"string\"\n                },\n                \"token\": {\n                    \"type\": \"string\"\n                }\n            }\n        }\n    }\n}\n```\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Update user (Admin/user both) | {{host}}/api/user/update-user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"User Is One\",\r\n    \"address\": \"123 Main St, City, Country\",\r\n    \"password\": \"user1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/user/update-user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"update-user"
+							]
+						},
+						"description": "### Update User Information\n\nThis endpoint allows the user to update their information.\n\n#### Request Body\n\n- `id` (number, optional): The id of the user if admin wants to update.\n- `name` (string, optional): The updated name of the user.\n- `address` (string, optional): The updated address of the user.\n- `password` (string, optional): The user's password for authentication.\n    \n\n#### Response\n\n- `Status: 302`\n- `Content-Type: application/json`\n    \n\n##### Successful Response\n\n``` json\n{\n    \"success\": true,\n    \"message\": \"\",\n    \"data\": {\n        \"id\": 0,\n        \"name\": \"\",\n        \"email\": \"\",\n        \"mobile_number\": 0,\n        \"address\": \"\",\n        \"role\": 0,\n        \"status\": 0,\n        \"created_at\": \"\",\n        \"updated_at\": \"\"\n    }\n}\n\n ```\n\n##### Failed Response\n\nIn case of a failed response, specific error messages and status codes will be provided to indicate the reason for the failure."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by user/Admin | {{host}}/api/user/delete-user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"66ac583bdd8883c72442cfb3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/user/delete-user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"delete-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user Data by Admin/User | {{host}}/api/user/get-user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"66ac583bdd8883c72442cfb3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/user/get-user?_id=66ac583bdd8883c72442cfb3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"get-user"
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "66ac583bdd8883c72442cfb3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All users by Admin | {{host}}/api/user/get-all-users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/user/get-all-users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"get-all-users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quizzes",
+			"item": [
+				{
+					"name": "User quiz",
+					"item": [
+						{
+							"name": "Get user dashboard | {{host}}/api/quizzes/user-dashboard",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/quizzes/user-dashboard",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"quizzes",
+										"user-dashboard"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all user attempts | {{host}}/api/quizzes/all-user-attempts",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{admin_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/quizzes/all-user-attempts",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"quizzes",
+										"all-user-attempts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get quiz score by Id | {{host}}/api/quizzes/quiz-score?quiz_id=6691287f762d2bdce6c5265a",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/quizzes/quiz-score?quiz_id=66ac6fb0aa8edf9ddb495a1b",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"quizzes",
+										"quiz-score"
+									],
+									"query": [
+										{
+											"key": "quiz_id",
+											"value": "66ac6fb0aa8edf9ddb495a1b"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Attempt Quiz by User | {{host}}/api/quizzes/quiz-attempt",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"answers\": [\n        {\n            \"questionId\": \"66ac7de8f462658b998a860d\",\n            \"selectedOption\": \"Rome\"\n        },\n        {\n            \"questionId\": \"66ac7de8f462658b998a860e\",\n            \"selectedOption\": \"Pluto\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/quizzes/quiz-attempt?quiz_id=66ac6fb0aa8edf9ddb495a1b",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"quizzes",
+										"quiz-attempt"
+									],
+									"query": [
+										{
+											"key": "quiz_id",
+											"value": "66ac6fb0aa8edf9ddb495a1b"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create Quiz by Admin | {{host}}/api/quizzes/create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"General Knowledge Quiz 1\",\n    \"description\": \"A quiz to test your general knowledge.\",\n    \"timer\": 300, // Timer in seconds\n    \"questions\": [\n        {\n            \"question\": \"What is the capital of France?\",\n            \"options\": [\"Paris\", \"Berlin\", \"Madrid\", \"Rome\"],\n            \"answer\": \"Paris\"\n        },\n        {\n            \"question\": \"What is the largest planet in our solar system?\",\n            \"options\": [\"Earth\", \"Mars\", \"Jupiter\", \"Saturn\"],\n            \"answer\": \"Jupiter\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/quizzes/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update quizzes | {{host}}/api/quizzes/update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"66ac6fb0aa8edf9ddb495a1b\",\n    \"title\": \"General Knowledge Quiz 1\",\n    \"description\": \"An updated quiz to test your general knowledge.\",\n    \"timer\": 600, // Timer in seconds\n    \"questions\": [\n        {\n            \"question\": \"What is the capital of Italy?\",\n            \"options\": [\"Paris\", \"Berlin\", \"Madrid\", \"Rome\"],\n            \"answer\": \"Rome\"\n        },\n        {\n            \"question\": \"Which planet is known as the Red Planet?\",\n            \"options\": [\"Earth\", \"Mars\", \"Jupiter\", \"Saturn\"],\n            \"answer\": \"Mars\"\n        }\n    ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/quizzes/update",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete quiz | {{host}}/api/quizzes/delete?_id=6690e066f421271c7b13c208",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/quizzes/delete?_id=6690e066f421271c7b13c208",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "6690e066f421271c7b13c208"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All quizzes | {{host}}/api/quizzes/get-all",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/quizzes/get-all",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get quiz By Id | {{host}}/api/quizzes/get?_id=6691287f762d2bdce6c5265a",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/quizzes/get?_id=6691287f762d2bdce6c5265a",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								"get"
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "6691287f762d2bdce6c5265a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
