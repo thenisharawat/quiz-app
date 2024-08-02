@@ -21,7 +21,7 @@ This is a quiz application built with the stack (MongoDB, Express.js and Node.js
 1. Clone the repository
 2. Install dependencies: `npm install`
 3. Add a `.env` file with the required environment variables (examples are mentioned below):
-```
+`
 PORT=5000
 MONGO_URL=mongodb://localhost:27017/quiz_db
 JWT_SECRET= "8B61CBC6579DDCE9D988DF3FE5EC11EC7556C8951F4C6D91175D711514C7F1458A19F641877475AB99CC677828A57869BDCC2AC7C2ECE7EB73D47779E67562A73FA1587651B65A18DDFC82D91C6688348B864D3DBB6AE4"
@@ -33,8 +33,7 @@ ADMIN_NAME2="Admin Two"
 ADMIN_EMAIL2="admin2@test.com"
 ADMIN_PASSWORD2="1111"
 ADMIN_MOBILE2=8976543211
-```
-```
+`
 
 ```md {"id":"01J488KNTJNBBCMKGM2RGMHE6D"}
 4. Start the server: `npm start`
