@@ -1,0 +1,52 @@
+/* src/components/User/Dashboard.css */
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light grey background for the whole page */
+    min-height: 100vh;
+}
+
+.dashboard-heading {
+    margin-bottom: 2rem;
+    color: #343a40; /* Dark grey for heading */
+    font-size: 2rem;
+    text-align: center;
+}
+
+.dashboard-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-menu-item {
+    margin-bottom: 1rem;
+}
+
+.dashboard-link {
+    display: block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff; /* Blue background for menu items */
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dashboard-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+.dashboard-link:active {
+    background-color: #004080; /* Even darker blue when clicked */
+}

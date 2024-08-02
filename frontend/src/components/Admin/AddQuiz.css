@@ -1,0 +1,98 @@
+/* src/components/Auth/AddQuiz.css */
+
+.add-quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: lightcoral ;/* Light grey background for the whole page */
+    min-height: 100vh;
+}
+
+.add-quiz-container h2 {
+    margin-bottom: 1.5rem;
+    color: #343a40; /* Dark grey for heading */
+}
+
+.add-quiz-form {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff; /* White background for the form */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6; /* Light border around the form */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #495057; /* Dark grey for labels */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #e9ecef; /* Light grey background for inputs */
+    color: #495057; /* Dark grey text color */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #80bdff; /* Blue border on focus */
+    outline: none;
+    background-color: #ffffff; /* White background on focus */
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add {
+    background-color: #28a745; /* Green background for Add Question button */
+}
+
+.btn-add:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.btn-submit {
+    background-color: #007bff; /* Blue background for Submit button */
+}
+
+.btn-submit:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.questions-list {
+    margin-top: 1rem;
+}
+
+.questions-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.questions-list li {
+    background: #f8f9fa; /* Very light grey background for question items */
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    border: 1px solid #dee2e6; /* Light border around question items */
+}

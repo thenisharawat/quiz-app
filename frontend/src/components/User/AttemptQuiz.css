@@ -1,0 +1,50 @@
+/* src/components/User/AttemptQuiz.css */
+
+.attempt-quiz-container {
+    padding: 20px;
+    background-color: #f0f8ff; /* Light background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333; /* Dark color for headings */
+    text-align: center;
+}
+
+.loading, .error, .no-quizzes {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.quiz-list {
+    margin-top: 20px;
+}
+
+.quiz-item {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.quiz-details {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}

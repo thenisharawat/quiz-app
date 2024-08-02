@@ -1,0 +1,50 @@
+/* src/components/User/ViewScores.css */
+
+.view-scores-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view-scores-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.scores-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.scores-table thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.scores-table th, .scores-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.scores-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.no-scores {
+    font-size: 18px;
+    color: #777;
+}
+
+.loading {
+    font-size: 18px;
+    color: #007bff;
+}
+
+.error {
+    font-size: 18px;
+    color: #dc3545;
+}
